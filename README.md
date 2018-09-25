@@ -1,4 +1,6 @@
-# AzureSMRLite: A 'Lite' version of AzureSMR Manage and Interact with Azure Resources.
+# AzureSMRLite: A 'Lite' version of AzureSMR
+
+### Manage and Interact with Azure Blobs and related Resources.
 
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
  
