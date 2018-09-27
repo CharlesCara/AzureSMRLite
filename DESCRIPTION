@@ -1,7 +1,7 @@
 Package: AzureSMRLite
 Type: Package
 Title: Operations on Azure Blobs
-Version: 0.1.0
+Version: 0.2.0
 Author: c(
   person(family="Microsoft Corporation", role="cph"),
   person("Charles", "Cara", role="cre", email="charles.cara@absolute-strategy.com", comment = "Ported Azure Blob elements"),
@@ -21,3 +21,4 @@ imports:
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.0.9000
+Suggests: testthat
