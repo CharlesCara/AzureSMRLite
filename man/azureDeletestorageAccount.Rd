@@ -4,8 +4,13 @@
 \alias{azureDeletestorageAccount}
 \title{Delete an Azure Storage Account.}
 \usage{
-azureDeletestorageAccount(azureActiveContext, storageAccount,
-  resourceGroup, subscriptionID, verbose = FALSE)
+azureDeletestorageAccount(
+  azureActiveContext,
+  storageAccount,
+  resourceGroup,
+  subscriptionID,
+  verbose = FALSE
+)
 }
 \arguments{
 \item{azureActiveContext}{A container used for caching variables used by `AzureSMR`, created by [createAzureContext()]}
@@ -22,8 +27,10 @@ azureDeletestorageAccount(azureActiveContext, storageAccount,
 Delete an Azure Storage Account.
 }
 \seealso{
-Other Storage account functions: \code{\link{azureCreateStorageAccount}},
-  \code{\link{azureGetStorageAccount}},
-  \code{\link{azureListSA}}, \code{\link{azureSAGetKey}}
+Other Storage account functions: 
+\code{\link{azureCreateStorageAccount}()},
+\code{\link{azureGetStorageAccount}()},
+\code{\link{azureListSA}()},
+\code{\link{azureSAGetKey}()}
 }
 \concept{Storage account functions}

@@ -4,8 +4,13 @@
 \alias{azureDeleteResourceGroup}
 \title{Delete a resourceGroup with all Resources.}
 \usage{
-azureDeleteResourceGroup(azureActiveContext, resourceGroup, subscriptionID,
-  type, verbose = FALSE)
+azureDeleteResourceGroup(
+  azureActiveContext,
+  resourceGroup,
+  subscriptionID,
+  type,
+  verbose = FALSE
+)
 }
 \arguments{
 \item{azureActiveContext}{A container used for caching variables used by `AzureSMR`, created by [createAzureContext()]}
@@ -25,9 +30,10 @@ Returns Dataframe of Resources
 Delete a resourceGroup with all Resources.
 }
 \seealso{
-Other Resource group functions: \code{\link{azureCreateResourceGroup}},
-  \code{\link{azureListAllResources}},
-  \code{\link{azureListRG}},
-  \code{\link{azureListSubscriptions}}
+Other Resource group functions: 
+\code{\link{azureCreateResourceGroup}()},
+\code{\link{azureListAllResources}()},
+\code{\link{azureListRG}()},
+\code{\link{azureListSubscriptions}()}
 }
 \concept{Resource group functions}

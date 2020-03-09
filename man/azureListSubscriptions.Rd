@@ -18,9 +18,10 @@ data frame with subscriptionID; Sets AzureContext subscriptionID
 Get available subscriptions.
 }
 \seealso{
-Other Resource group functions: \code{\link{azureCreateResourceGroup}},
-  \code{\link{azureDeleteResourceGroup}},
-  \code{\link{azureListAllResources}},
-  \code{\link{azureListRG}}
+Other Resource group functions: 
+\code{\link{azureCreateResourceGroup}()},
+\code{\link{azureDeleteResourceGroup}()},
+\code{\link{azureListAllResources}()},
+\code{\link{azureListRG}()}
 }
 \concept{Resource group functions}

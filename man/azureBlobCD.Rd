@@ -4,8 +4,16 @@
 \alias{azureBlobCD}
 \title{Azure blob change current directory.}
 \usage{
-azureBlobCD(azureActiveContext, directory, container, file, storageAccount,
-  storageKey, resourceGroup, verbose = FALSE)
+azureBlobCD(
+  azureActiveContext,
+  directory,
+  container,
+  file,
+  storageAccount,
+  storageKey,
+  resourceGroup,
+  verbose = FALSE
+)
 }
 \arguments{
 \item{azureActiveContext}{Either an `azureActiveContext` object or `NULL`. The blob store functions support two modes of connecting to the Azure API: authenticate using Active Directory or providing your own storage key. If this value is `NULL`, you must provide the `storageKey`.}
@@ -33,10 +41,12 @@ The blob store functions support two modes of connecting to the Azure API:authen
 }
 
 \seealso{
-Other Blob store functions: \code{\link{azureBlobFind}},
-  \code{\link{azureBlobLS}}, \code{\link{azureDeleteBlob}},
-  \code{\link{azureGetBlob}},
-  \code{\link{azureListStorageBlobs}},
-  \code{\link{azurePutBlob}}
+Other Blob store functions: 
+\code{\link{azureBlobFind}()},
+\code{\link{azureBlobLS}()},
+\code{\link{azureDeleteBlob}()},
+\code{\link{azureGetBlob}()},
+\code{\link{azureListStorageBlobs}()},
+\code{\link{azurePutBlob}()}
 }
 \concept{Blob store functions}

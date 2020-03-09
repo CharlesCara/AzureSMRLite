@@ -4,8 +4,17 @@
 \alias{azureGetBlob}
 \title{Get contents from a specifed storage blob.}
 \usage{
-azureGetBlob(azureActiveContext, blob, directory, type = "text",
-  storageAccount, storageKey, container, resourceGroup, verbose = FALSE)
+azureGetBlob(
+  azureActiveContext,
+  blob,
+  directory,
+  type = "text",
+  storageAccount,
+  storageKey,
+  container,
+  resourceGroup,
+  verbose = FALSE
+)
 }
 \arguments{
 \item{azureActiveContext}{Either an `azureActiveContext` object or `NULL`. The blob store functions support two modes of connecting to the Azure API: authenticate using Active Directory or providing your own storage key. If this value is `NULL`, you must provide the `storageKey`.}
@@ -35,10 +44,12 @@ The blob store functions support two modes of connecting to the Azure API:authen
 }
 
 \seealso{
-Other Blob store functions: \code{\link{azureBlobCD}},
-  \code{\link{azureBlobFind}}, \code{\link{azureBlobLS}},
-  \code{\link{azureDeleteBlob}},
-  \code{\link{azureListStorageBlobs}},
-  \code{\link{azurePutBlob}}
+Other Blob store functions: 
+\code{\link{azureBlobCD}()},
+\code{\link{azureBlobFind}()},
+\code{\link{azureBlobLS}()},
+\code{\link{azureDeleteBlob}()},
+\code{\link{azureListStorageBlobs}()},
+\code{\link{azurePutBlob}()}
 }
 \concept{Blob store functions}

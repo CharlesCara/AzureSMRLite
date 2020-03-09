@@ -4,8 +4,12 @@
 \alias{azureAuthenticateOnAuthType}
 \title{Switch based on auth types.}
 \usage{
-azureAuthenticateOnAuthType(azureActiveContext, authType, resource,
-  verbose = FALSE)
+azureAuthenticateOnAuthType(
+  azureActiveContext,
+  authType,
+  resource,
+  verbose = FALSE
+)
 }
 \arguments{
 \item{azureActiveContext}{A container used for caching variables used by `AzureSMR`, created by [createAzureContext()]}
@@ -23,14 +27,15 @@ If successful, returns TRUE
 Switch based on auth types.
 }
 \seealso{
-Other Azure resource functions: \code{\link{adlFileInputStreamCheck}},
-  \code{\link{adlFileOutputStreamCheck}},
-  \code{\link{azureAuthenticate}},
-  \code{\link{azureCheckToken}},
-  \code{\link{azureGetTokenClientCredential}},
-  \code{\link{azureGetTokenDeviceCodeFetch}},
-  \code{\link{azureGetTokenDeviceCode}},
-  \code{\link{azureGetTokenRefreshToken}},
-  \code{\link{showDeviceCodeMessageToUser}}
+Other Azure resource functions: 
+\code{\link{adlFileInputStreamCheck}()},
+\code{\link{adlFileOutputStreamCheck}()},
+\code{\link{azureAuthenticate}()},
+\code{\link{azureCheckToken}()},
+\code{\link{azureGetTokenClientCredential}()},
+\code{\link{azureGetTokenDeviceCodeFetch}()},
+\code{\link{azureGetTokenDeviceCode}()},
+\code{\link{azureGetTokenRefreshToken}()},
+\code{\link{showDeviceCodeMessageToUser}()}
 }
 \concept{Azure resource functions}

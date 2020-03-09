@@ -4,8 +4,13 @@
 \alias{azureCreateResourceGroup}
 \title{Create a resourceGroup.}
 \usage{
-azureCreateResourceGroup(azureActiveContext, resourceGroup, location,
-  subscriptionID, verbose = FALSE)
+azureCreateResourceGroup(
+  azureActiveContext,
+  resourceGroup,
+  location,
+  subscriptionID,
+  verbose = FALSE
+)
 }
 \arguments{
 \item{azureActiveContext}{A container used for caching variables used by `AzureSMR`, created by [createAzureContext()]}
@@ -25,9 +30,10 @@ Returns Dataframe of Resources
 Create a resourceGroup.
 }
 \seealso{
-Other Resource group functions: \code{\link{azureDeleteResourceGroup}},
-  \code{\link{azureListAllResources}},
-  \code{\link{azureListRG}},
-  \code{\link{azureListSubscriptions}}
+Other Resource group functions: 
+\code{\link{azureDeleteResourceGroup}()},
+\code{\link{azureListAllResources}()},
+\code{\link{azureListRG}()},
+\code{\link{azureListSubscriptions}()}
 }
 \concept{Resource group functions}

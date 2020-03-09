@@ -4,9 +4,15 @@
 \alias{azureCreateStorageAccount}
 \title{Create an Azure Storage Account.}
 \usage{
-azureCreateStorageAccount(azureActiveContext, storageAccount,
-  location = "northeurope", resourceGroup, subscriptionID,
-  asynchronous = FALSE, verbose = FALSE)
+azureCreateStorageAccount(
+  azureActiveContext,
+  storageAccount,
+  location = "northeurope",
+  resourceGroup,
+  subscriptionID,
+  asynchronous = FALSE,
+  verbose = FALSE
+)
 }
 \arguments{
 \item{azureActiveContext}{A container used for caching variables used by `AzureSMR`, created by [createAzureContext()]}
@@ -27,8 +33,10 @@ azureCreateStorageAccount(azureActiveContext, storageAccount,
 Create an Azure Storage Account.
 }
 \seealso{
-Other Storage account functions: \code{\link{azureDeletestorageAccount}},
-  \code{\link{azureGetStorageAccount}},
-  \code{\link{azureListSA}}, \code{\link{azureSAGetKey}}
+Other Storage account functions: 
+\code{\link{azureDeletestorageAccount}()},
+\code{\link{azureGetStorageAccount}()},
+\code{\link{azureListSA}()},
+\code{\link{azureSAGetKey}()}
 }
 \concept{Storage account functions}

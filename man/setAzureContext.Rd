@@ -4,10 +4,26 @@
 \alias{setAzureContext}
 \title{Updates azureActiveContext object.}
 \usage{
-setAzureContext(azureActiveContext, tenantID, clientID, authKey,
-  subscriptionID, resourceGroup, storageKey, storageAccount, container,
-  blob, vmName, hdiAdmin, hdiPassword, clustername, kind, sessionID,
-  authType, resource)
+setAzureContext(
+  azureActiveContext,
+  tenantID,
+  clientID,
+  authKey,
+  subscriptionID,
+  resourceGroup,
+  storageKey,
+  storageAccount,
+  container,
+  blob,
+  vmName,
+  hdiAdmin,
+  hdiPassword,
+  clustername,
+  kind,
+  sessionID,
+  authType,
+  resource
+)
 }
 \arguments{
 \item{azureActiveContext}{A container used for caching variables used by `AzureSMR`, created by [createAzureContext()]}
@@ -50,6 +66,7 @@ setAzureContext(azureActiveContext, tenantID, clientID, authKey,
 Updates the value of an `azureActiveContext` object, created by [createAzureContext()]
 }
 \seealso{
-Other azureActiveContext functions: \code{\link{createAzureContext}}
+Other azureActiveContext functions: 
+\code{\link{createAzureContext}()}
 }
 \concept{azureActiveContext functions}

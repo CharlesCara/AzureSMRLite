@@ -4,8 +4,7 @@
 \alias{azureListSA}
 \title{List storage accounts.}
 \usage{
-azureListSA(azureActiveContext, resourceGroup, subscriptionID,
-  verbose = FALSE)
+azureListSA(azureActiveContext, resourceGroup, subscriptionID, verbose = FALSE)
 }
 \arguments{
 \item{azureActiveContext}{A container used for caching variables used by `AzureSMR`, created by [createAzureContext()]}
@@ -20,9 +19,10 @@ azureListSA(azureActiveContext, resourceGroup, subscriptionID,
 List storage accounts.
 }
 \seealso{
-Other Storage account functions: \code{\link{azureCreateStorageAccount}},
-  \code{\link{azureDeletestorageAccount}},
-  \code{\link{azureGetStorageAccount}},
-  \code{\link{azureSAGetKey}}
+Other Storage account functions: 
+\code{\link{azureCreateStorageAccount}()},
+\code{\link{azureDeletestorageAccount}()},
+\code{\link{azureGetStorageAccount}()},
+\code{\link{azureSAGetKey}()}
 }
 \concept{Storage account functions}

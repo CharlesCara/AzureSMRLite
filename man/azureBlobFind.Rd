@@ -4,8 +4,15 @@
 \alias{azureBlobFind}
 \title{Find file in a storage account directory.}
 \usage{
-azureBlobFind(azureActiveContext, file, storageAccount, storageKey,
-  container, resourceGroup, verbose = FALSE)
+azureBlobFind(
+  azureActiveContext,
+  file,
+  storageAccount,
+  storageKey,
+  container,
+  resourceGroup,
+  verbose = FALSE
+)
 }
 \arguments{
 \item{azureActiveContext}{Either an `azureActiveContext` object or `NULL`. The blob store functions support two modes of connecting to the Azure API: authenticate using Active Directory or providing your own storage key. If this value is `NULL`, you must provide the `storageKey`.}
@@ -31,10 +38,12 @@ The blob store functions support two modes of connecting to the Azure API:authen
 }
 
 \seealso{
-Other Blob store functions: \code{\link{azureBlobCD}},
-  \code{\link{azureBlobLS}}, \code{\link{azureDeleteBlob}},
-  \code{\link{azureGetBlob}},
-  \code{\link{azureListStorageBlobs}},
-  \code{\link{azurePutBlob}}
+Other Blob store functions: 
+\code{\link{azureBlobCD}()},
+\code{\link{azureBlobLS}()},
+\code{\link{azureDeleteBlob}()},
+\code{\link{azureGetBlob}()},
+\code{\link{azureListStorageBlobs}()},
+\code{\link{azurePutBlob}()}
 }
 \concept{Blob store functions}

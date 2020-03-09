@@ -16,14 +16,15 @@ If successful, returns TRUE
 Display device code flow message to user.
 }
 \seealso{
-Other Azure resource functions: \code{\link{adlFileInputStreamCheck}},
-  \code{\link{adlFileOutputStreamCheck}},
-  \code{\link{azureAuthenticateOnAuthType}},
-  \code{\link{azureAuthenticate}},
-  \code{\link{azureCheckToken}},
-  \code{\link{azureGetTokenClientCredential}},
-  \code{\link{azureGetTokenDeviceCodeFetch}},
-  \code{\link{azureGetTokenDeviceCode}},
-  \code{\link{azureGetTokenRefreshToken}}
+Other Azure resource functions: 
+\code{\link{adlFileInputStreamCheck}()},
+\code{\link{adlFileOutputStreamCheck}()},
+\code{\link{azureAuthenticateOnAuthType}()},
+\code{\link{azureAuthenticate}()},
+\code{\link{azureCheckToken}()},
+\code{\link{azureGetTokenClientCredential}()},
+\code{\link{azureGetTokenDeviceCodeFetch}()},
+\code{\link{azureGetTokenDeviceCode}()},
+\code{\link{azureGetTokenRefreshToken}()}
 }
 \concept{Azure resource functions}

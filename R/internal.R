@@ -1,7 +1,7 @@
 azureApiHeaders <- function(token) {
   headers <- c(Host = "management.azure.com",
                Authorization = token,
-                `Content-type` = "application/json")
+               `Content-type` = "application/json")
   httr::add_headers(.headers = headers)
 }
 
@@ -27,42 +27,42 @@ extractUrlArguments <- function(x) {
 
 #' @import httr
 callAzureStorageApi <- function(url, verb = "GET", storageKey, storageAccount,
-                   headers = NULL, container = NULL, CMD, size = getContentSize(content), contenttype = NULL,
-                   content = NULL,
-                   verbose = FALSE) {
+                                headers = NULL, container = NULL, CMD, size = getContentSize(content), contenttype = NULL,
+                                content = NULL,
+                                verbose = FALSE) {
   dateStamp <- httr::http_date(Sys.time())
 
   verbosity <- set_verbosity(verbose)
 
   if (missing(CMD) || is.null(CMD)) CMD <- extractUrlArguments(url)
 
-    sig <- createAzureStorageSignature(url = url, verb = verb,
-      key = storageKey, storageAccount = storageAccount, container = container,
-      headers = headers, CMD = CMD, size = size,
-      contenttype = contenttype, dateStamp = dateStamp, verbose = verbose)
+  sig <- createAzureStorageSignature(url = url, verb = verb,
+                                     key = storageKey, storageAccount = storageAccount, container = container,
+                                     headers = headers, CMD = CMD, size = size,
+                                     contenttype = contenttype, dateStamp = dateStamp, verbose = verbose)
 
   azToken <- paste0("SharedKey ", storageAccount, ":", sig)
 
   switch(verb,
-  "GET" = GET(url, add_headers(.headers = c(Authorization = azToken,
-                                    `Content-Length` = "0",
-                                    `x-ms-version` = "2017-04-17",
-                                    `x-ms-date` = dateStamp)
-                                    ),
-    verbosity),
-  "PUT" = PUT(url, add_headers(.headers = c(Authorization = azToken,
-                                         `Content-Length` = size,
-                                         `x-ms-version` = "2017-04-17",
-                                         `x-ms-date` = dateStamp,
-                                         `x-ms-blob-type` = "Blockblob",
-                                         `Content-type` = contenttype)),
-           body = content,
-    verbosity)
+         "GET" = GET(url, add_headers(.headers = c(Authorization = azToken,
+                                                   `Content-Length` = "0",
+                                                   `x-ms-version` = "2017-04-17",
+                                                   `x-ms-date` = dateStamp)
+         ),
+         verbosity),
+         "PUT" = PUT(url, add_headers(.headers = c(Authorization = azToken,
+                                                   `Content-Length` = size,
+                                                   `x-ms-version` = "2017-04-17",
+                                                   `x-ms-date` = dateStamp,
+                                                   `x-ms-blob-type` = "Blockblob",
+                                                   `Content-type` = contenttype)),
+                     body = content,
+                     verbosity)
   )
 }
 
 getContentSize<- function(obj) {
-    switch(class(obj),
+  switch(class(obj),
          "raw" = length(obj),
          "character" = nchar(obj),
          nchar(obj))
@@ -71,8 +71,8 @@ getContentSize<- function(obj) {
 #' @importFrom base64enc base64encode base64decode
 #' @importFrom digest hmac
 createAzureStorageSignature <- function(url, verb,
-  key, storageAccount, container = NULL,
-  headers = NULL, CMD = NULL, size = NULL, contenttype = NULL, dateStamp, verbose = FALSE) {
+                                        key, storageAccount, container = NULL,
+                                        headers = NULL, CMD = NULL, size = NULL, contenttype = NULL, dateStamp, verbose = FALSE) {
 
   if (missing(dateStamp)) {
     dateStamp <- httr::http_date(Sys.time())
@@ -87,13 +87,13 @@ createAzureStorageSignature <- function(url, verb,
   arg2 <- paste0("/", storageAccount, "/", container, CMD)
 
   SIG <- paste0(verb, "\n\n\n", size, "\n\n", contenttype, "\n\n\n\n\n\n\n",
-                   arg1, "\n", arg2)
+                arg1, "\n", arg2)
   if (verbose) message(paste0("TRACE: STRINGTOSIGN: ", SIG))
   base64encode(hmac(key = base64decode(key),
                     object = iconv(SIG, "ASCII", to = "UTF-8"),
                     algo = "sha256",
                     raw = TRUE)
-                   )
+  )
 }
 
 x_ms_date <- function() httr::http_date(Sys.time())
@@ -102,10 +102,10 @@ x_ms_date <- function() httr::http_date(Sys.time())
 azure_storage_header <- function(shared_key, date = x_ms_date(), content_length = 0) {
   if(!is.character(shared_key)) stop("Expecting a character for `shared_key`")
   headers <- c(
-      Authorization = shared_key,
-      `Content-Length` = as.character(content_length),
-      `x-ms-version` = "2017-04-17",
-      `x-ms-date` = date
+    Authorization = shared_key,
+    `Content-Length` = as.character(content_length),
+    `x-ms-version` = "2017-04-17",
+    `x-ms-date` = date
   )
   add_headers(.headers = headers)
 }
@@ -125,14 +125,14 @@ getSig <- function(azureActiveContext, url, verb, key, storageAccount,
   arg2 <- paste0("/", storageAccount, "/", container, CMD)
 
   SIG <- paste0(verb, "\n\n\n", size, "\n\n", contenttype, "\n\n\n\n\n\n\n",
-                   arg1, "\n", arg2)
+                arg1, "\n", arg2)
   if (verbose) message(paste0("TRACE: STRINGTOSIGN: ", SIG))
   base64encode(hmac(key = base64decode(key),
                     object = iconv(SIG, "ASCII", to = "UTF-8"),
                     algo = "sha256",
                     raw = TRUE)
-                   )
-  }
+  )
+}
 
 getAzureErrorMessage <- function(r) {
   msg <- paste0(as.character(sys.call(1))[1], "()") # Name of calling fucntion
@@ -147,13 +147,18 @@ getAzureErrorMessage <- function(r) {
     msg <- addToMsg(rr$AuthenticationErrorDetail)
   } else {
     rr <- content(r)
-    msg <- addToMsg(rr$code)
-    msg <- addToMsg(rr$message)
-    msg <- addToMsg(rr$error$message)
-
-    msg <- addToMsg(rr$Code)
-    msg <- addToMsg(rr$Message)
-    msg <- addToMsg(rr$Error$Message)
+    if(!is.atomic(rr)){
+      msg <- addToMsg(rr$code)
+      msg <- addToMsg(rr$message)
+      if(!is.atomic(rr$error)){
+        msg <- addToMsg(rr$error$message)
+      }
+      msg <- addToMsg(rr$Code)
+      msg <- addToMsg(rr$Message)
+      if(!is.atomic(rr$Error)){
+        msg <- addToMsg(rr$Error$Message)
+      }
+    }
 
   }
   msg <- addToMsg(paste0("Return code: ", status_code(r)))

@@ -4,8 +4,12 @@
 \alias{azureGetTokenRefreshToken}
 \title{Get Azure token using RefreshToken}
 \usage{
-azureGetTokenRefreshToken(azureActiveContext, tenantID, refreshToken,
-  verbose = FALSE)
+azureGetTokenRefreshToken(
+  azureActiveContext,
+  tenantID,
+  refreshToken,
+  verbose = FALSE
+)
 }
 \arguments{
 \item{azureActiveContext}{A container used for caching variables used by `AzureSMR`, created by [createAzureContext()]}
@@ -29,14 +33,15 @@ See \url{https://azure.microsoft.com/en-us/documentation/articles/resource-group
 \url{https://azure.microsoft.com/en-us/documentation/articles/resource-group-create-service-principal-portal/}
 }
 \seealso{
-Other Azure resource functions: \code{\link{adlFileInputStreamCheck}},
-  \code{\link{adlFileOutputStreamCheck}},
-  \code{\link{azureAuthenticateOnAuthType}},
-  \code{\link{azureAuthenticate}},
-  \code{\link{azureCheckToken}},
-  \code{\link{azureGetTokenClientCredential}},
-  \code{\link{azureGetTokenDeviceCodeFetch}},
-  \code{\link{azureGetTokenDeviceCode}},
-  \code{\link{showDeviceCodeMessageToUser}}
+Other Azure resource functions: 
+\code{\link{adlFileInputStreamCheck}()},
+\code{\link{adlFileOutputStreamCheck}()},
+\code{\link{azureAuthenticateOnAuthType}()},
+\code{\link{azureAuthenticate}()},
+\code{\link{azureCheckToken}()},
+\code{\link{azureGetTokenClientCredential}()},
+\code{\link{azureGetTokenDeviceCodeFetch}()},
+\code{\link{azureGetTokenDeviceCode}()},
+\code{\link{showDeviceCodeMessageToUser}()}
 }
 \concept{Azure resource functions}

@@ -4,8 +4,15 @@
 \alias{azureListAllResources}
 \title{Get all Resource in default Subscription.}
 \usage{
-azureListAllResources(azureActiveContext, resourceGroup, subscriptionID,
-  name, type, location, verbose = FALSE)
+azureListAllResources(
+  azureActiveContext,
+  resourceGroup,
+  subscriptionID,
+  name,
+  type,
+  location,
+  verbose = FALSE
+)
 }
 \arguments{
 \item{azureActiveContext}{Azure Context Object}
@@ -29,9 +36,10 @@ Returns Dataframe of Resources
 Get all Resource in default Subscription.
 }
 \seealso{
-Other Resource group functions: \code{\link{azureCreateResourceGroup}},
-  \code{\link{azureDeleteResourceGroup}},
-  \code{\link{azureListRG}},
-  \code{\link{azureListSubscriptions}}
+Other Resource group functions: 
+\code{\link{azureCreateResourceGroup}()},
+\code{\link{azureDeleteResourceGroup}()},
+\code{\link{azureListRG}()},
+\code{\link{azureListSubscriptions}()}
 }
 \concept{Resource group functions}

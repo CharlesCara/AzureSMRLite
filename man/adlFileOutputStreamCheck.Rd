@@ -13,14 +13,15 @@ adlFileOutputStreamCheck(adlFileOutputStream)
 Check for proper adlFileOutputStream.
 }
 \seealso{
-Other Azure resource functions: \code{\link{adlFileInputStreamCheck}},
-  \code{\link{azureAuthenticateOnAuthType}},
-  \code{\link{azureAuthenticate}},
-  \code{\link{azureCheckToken}},
-  \code{\link{azureGetTokenClientCredential}},
-  \code{\link{azureGetTokenDeviceCodeFetch}},
-  \code{\link{azureGetTokenDeviceCode}},
-  \code{\link{azureGetTokenRefreshToken}},
-  \code{\link{showDeviceCodeMessageToUser}}
+Other Azure resource functions: 
+\code{\link{adlFileInputStreamCheck}()},
+\code{\link{azureAuthenticateOnAuthType}()},
+\code{\link{azureAuthenticate}()},
+\code{\link{azureCheckToken}()},
+\code{\link{azureGetTokenClientCredential}()},
+\code{\link{azureGetTokenDeviceCodeFetch}()},
+\code{\link{azureGetTokenDeviceCode}()},
+\code{\link{azureGetTokenRefreshToken}()},
+\code{\link{showDeviceCodeMessageToUser}()}
 }
 \concept{Azure resource functions}

@@ -20,9 +20,10 @@ Dataframe of resourceGroups
 Get all resource groups in subscription ID.
 }
 \seealso{
-Other Resource group functions: \code{\link{azureCreateResourceGroup}},
-  \code{\link{azureDeleteResourceGroup}},
-  \code{\link{azureListAllResources}},
-  \code{\link{azureListSubscriptions}}
+Other Resource group functions: 
+\code{\link{azureCreateResourceGroup}()},
+\code{\link{azureDeleteResourceGroup}()},
+\code{\link{azureListAllResources}()},
+\code{\link{azureListSubscriptions}()}
 }
 \concept{Resource group functions}

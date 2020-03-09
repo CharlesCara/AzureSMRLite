@@ -3,7 +3,6 @@
 \docType{package}
 \name{AzureSMRLite}
 \alias{AzureSMRLite}
-\alias{AzureSMRLite-package}
 \title{AzureSMRLite.}
 \description{
 AzureSMRLite.

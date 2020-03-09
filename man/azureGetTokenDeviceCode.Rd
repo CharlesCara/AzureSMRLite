@@ -4,8 +4,13 @@
 \alias{azureGetTokenDeviceCode}
 \title{Get Azure token using DeviceCode.}
 \usage{
-azureGetTokenDeviceCode(azureActiveContext, tenantID, clientID, resource,
-  verbose = FALSE)
+azureGetTokenDeviceCode(
+  azureActiveContext,
+  tenantID,
+  clientID,
+  resource,
+  verbose = FALSE
+)
 }
 \arguments{
 \item{azureActiveContext}{A container used for caching variables used by `AzureSMR`, created by [createAzureContext()]}
@@ -31,14 +36,15 @@ See \url{https://azure.microsoft.com/en-us/documentation/articles/resource-group
 \url{https://azure.microsoft.com/en-us/resources/samples/active-directory-dotnet-deviceprofile/}
 }
 \seealso{
-Other Azure resource functions: \code{\link{adlFileInputStreamCheck}},
-  \code{\link{adlFileOutputStreamCheck}},
-  \code{\link{azureAuthenticateOnAuthType}},
-  \code{\link{azureAuthenticate}},
-  \code{\link{azureCheckToken}},
-  \code{\link{azureGetTokenClientCredential}},
-  \code{\link{azureGetTokenDeviceCodeFetch}},
-  \code{\link{azureGetTokenRefreshToken}},
-  \code{\link{showDeviceCodeMessageToUser}}
+Other Azure resource functions: 
+\code{\link{adlFileInputStreamCheck}()},
+\code{\link{adlFileOutputStreamCheck}()},
+\code{\link{azureAuthenticateOnAuthType}()},
+\code{\link{azureAuthenticate}()},
+\code{\link{azureCheckToken}()},
+\code{\link{azureGetTokenClientCredential}()},
+\code{\link{azureGetTokenDeviceCodeFetch}()},
+\code{\link{azureGetTokenRefreshToken}()},
+\code{\link{showDeviceCodeMessageToUser}()}
 }
 \concept{Azure resource functions}

@@ -4,8 +4,13 @@
 \alias{azureSAGetKey}
 \title{Get the Storage Keys for Specified Storage Account.}
 \usage{
-azureSAGetKey(azureActiveContext, storageAccount, resourceGroup,
-  subscriptionID, verbose = FALSE)
+azureSAGetKey(
+  azureActiveContext,
+  storageAccount,
+  resourceGroup,
+  subscriptionID,
+  verbose = FALSE
+)
 }
 \arguments{
 \item{azureActiveContext}{A container used for caching variables used by `AzureSMR`, created by [createAzureContext()]}
@@ -22,9 +27,10 @@ azureSAGetKey(azureActiveContext, storageAccount, resourceGroup,
 Get the Storage Keys for Specified Storage Account.
 }
 \seealso{
-Other Storage account functions: \code{\link{azureCreateStorageAccount}},
-  \code{\link{azureDeletestorageAccount}},
-  \code{\link{azureGetStorageAccount}},
-  \code{\link{azureListSA}}
+Other Storage account functions: 
+\code{\link{azureCreateStorageAccount}()},
+\code{\link{azureDeletestorageAccount}()},
+\code{\link{azureGetStorageAccount}()},
+\code{\link{azureListSA}()}
 }
 \concept{Storage account functions}
